@@ -1,0 +1,76 @@
+volumes:
+  minecraft-data:
+
+services:
+  minecraft:
+    image: itzg/minecraft-server:java17-openj9
+    volumes:
+      - ./minecraft-data:/data
+      - ./plugins:/plugins:ro
+    environment:
+      EULA: 'true'
+      CONSOLE: 'false'
+      # Minecraft server type 
+      # VANILLA, FORGE, PAPER, CURSEFORGE, FABRIC
+      TYPE: FABRIC
+      # Minecraft server version       
+      VERSION: LATEST
+      # Memory limit 
+      MEMORY: 4G
+      # Server name 
+      SERVER_NAME: My Custom Minecraft Server
+      # Level type and generator settings 
+      # DEFAULT, FLAT, LARGEBIOMES, AMPLIFIED, CUSTOMIZED, BUFFET
+      LEVEL_TYPE: DEFAULT
+      # World save name 
+      LEVEL: local-minecraft-world
+      # Game mode 
+      # creative, survival, adventure, spectator 
+      MODE: creative
+      # Force gamemode 
+      FORCE_GAMEMODE: 'true'
+      # Difficulty 
+      # peaceful, easy, normal, hard
+      DIFFICULTY: peaceful
+      # Max players 
+      MAX_PLAYERS: 4
+      # PVP mode 
+      PVP: 'false'
+      # Allow flight 
+      ALLOW_FLIGHT: 'true'
+      # Max world size 
+      MAX_WORLD_SIZE: 10000
+      # Max build height 
+      MAX_BUILD_HEIGHT: 265
+      # Spawn animals 
+      SPAWN_ANIMALS: 'true'
+      # Spawn monsters 
+      SPAWN_MONSTERS: 'true'
+      # Spawn NPCs 
+      SPAWN_NPCS: 'true'
+      # View distance 
+      VIEW_DISTANCE: 20
+      # Online mode 
+      ONLINE_MODE: 'true'
+      # Enable command block 
+      ENABLE_COMMAND_BLOCK: 'true'
+    ports:
+      - "25565:25565"
+    restart: unless-stopped
+
+  backups:
+    image: itzg/mc-backup:latest
+    environment:
+      # Minecraft server backups interval 
+      BACKUP_INTERVAL: 23h
+      # Minecraft server backups prune interval 
+      PRUNE_BACKUPS_DAYS: 7
+    volumes:
+    - ./minecraft-data:/data:ro
+    # Minecraft backups location
+    - ./minecraft-data/backups:/backups
+    network_mode: 'service:minecraft'
+    restart: unless-stopped
+    depends_on:
+      minecraft:
+        condition: service_healthy
