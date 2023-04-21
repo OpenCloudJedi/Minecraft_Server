@@ -1,6 +1,6 @@
 # How it works
 
-As stated in the previous section, the docker-compose.yaml manifest file provided for this exercise is a full map of our desired Minecraft application. Let's take a look at that file to analyze some of the information contained in that file, and understand what each part does.
+As stated in the previous section, the docker-compose.yml manifest file provided for this exercise is a full map of our desired Minecraft application. Let's take a look at that file to analyze some of the information contained in that file, and understand what each part does.
 
 The first 9 lines of the provided example define which vendor, container, and version, as well as persistent volume mount locations. 
 
@@ -19,7 +19,7 @@ Lines 10-56 are all configuration directives given to the container at run time 
 
 In this example, we have provided a large number of Environment Variables to customize the environment to our liking. The only required Environment Variable is the `EULA: 'true'` which accepts the End User License Agreement. 
 
-Read through the provided Environment variables, and feel free to change the values of any directives you want to use in your own environment. Ensure the original spacing is maintained for the *docker-compose.yaml* file whan updating the environment, as YAML syntax is sensitive to line indention.
+Read through the provided Environment variables, and feel free to change the values of any directives you want to use in your own environment. Ensure the original spacing is maintained for the *docker-compose.yml* file when updating the environment, as YAML syntax is sensitive to line indention.
 
 Lines 57-58 declare the ports exposed by the application. When it reads 25565:25565 the first number represents the port used on the host. The second number represents the port listening on the container itself.
 
