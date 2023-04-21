@@ -31,4 +31,8 @@ The last section, lines 61-76 is a separate container used to make regular backu
 
 The `BACKUP_INTERVAL: 23h` and `PRUNE_BACKUPS_DAYS: 7` directives set the interval and retention period for the backups. The service backups will be directed to `./minecraft-data/backups` on the local machine.
 
-[![continue](./images/continue.png)](./3_Lab_Exercise.md)
+To get started, choose the lab button that corresponds with your currently running Operating System.
+
+[![begin_lab_macos](./images/begin_lab_macos.png)](./3_Lab_Exercise_Mac.md)
+
+[![begin_lab_windows](./images/begin_lab_windows.png)](./3_Lab_Exercise_Windows.md)

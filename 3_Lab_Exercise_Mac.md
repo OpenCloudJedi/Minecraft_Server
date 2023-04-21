@@ -3,15 +3,15 @@
 
 In this section we will get hands-on experience and deploy our own Minecraft server. The first step to getting this configured it to download the Docker Desktop software that will be used to build and maintain your Minecraft deployment. 
 ## Install Docker Desktop
-Each operating system has it's own installation instructions. 
-- To install on Windows use the instructions found [here](https://docs.docker.com/desktop/install/windows-install/). If pre-requisite software needs to be installed in Windows such as WSL2, make sure you reboot the computer before attempting to use the docker service. 
-- MacOS instructions can be found [here](https://docs.docker.com/desktop/install/mac-install/).
 
+**Step 1.** Navigate to [https://docker.com/products/docker-desktop](https://docker.com/products/docker-desktop) and download the installer for Docker Desktop.
 
-**Step 1.** Once the file has downloaded, click the `Docker.dmg` file to begin the install. Once the files are unpacked the icon needs to be dragged into the Applications folder.
+![download_docker](./images/download_docker.png)
+
+**Step 2.** Once the file has downloaded, click the `Docker.dmg` file to begin the install. Once the files are unpacked the icon needs to be dragged into the Applications folder.
 ![drag_docker](./images/drag_docker.png)
 
-**Step 2.** Now that we have Docker Desktop installed, we can launch the application. This will give us a view into our running containers when we start them. Navigate to your applications folder and double click the Docker Desktop icon to start the application. You can also drag the icon to the Dock for easier access if you choose. Docker Desktop should look like this:
+**Step 3.** Now that we have Docker Desktop installed, we can launch the application. This will give us a view into our running containers when we start them. Navigate to your applications folder and double click the Docker Desktop icon to start the application. You can also drag the icon to the Dock for easier access if you choose. Docker Desktop should look like this:
 
 ![docker_desktop](./images/docker_desktop.png)
 
@@ -41,7 +41,7 @@ Once Docker Desktop is installed and functional we will be ready to clone the Gi
 
 ![environment](./images/environment.png)
 
-**Step 7** We are now ready to start up our containers based on that *docker-compose.yml* file. In the terminal type the following command to instantiate the containers and install Minecraft.
+**Step 7.** We are now ready to start up our containers based on that *docker-compose.yml* file. In the terminal type the following command to instantiate the containers and install Minecraft.
 
 `docker-compose up -d`
 
