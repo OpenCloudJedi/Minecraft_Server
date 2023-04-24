@@ -6,11 +6,11 @@ Target Audience: Beginner level students interested in learning how to deploy Mi
 - Understand the basics of Docker and its uses in the deployment of Minecraft
 - Install Docker Desktop on their Mac or Windows operating system
 - Deploy a local version of Minecraft using Docker Desktop
-- Connect to the deployed Minecraft server and play the game
+- Understand the different directives provided in the docker-compose.yml manifest file used to deploy the custom MineCraft server. 
 
 ## Materials Required:
-- A computer running either MacOS version 11 or newer, or Windows operating system version 10 or 11.
-- Administrative rights to install Docker Desktop on the computer
+- A computer running either MacOS version 11 or newer, or Windows operating system version 10 or 11 with at least 8Gb of RAM. 
+- Administrative rights to install Docker Desktop and Git on the computer.
 - Internet connection
 
 ## Lesson Plan Outline:
