@@ -1,5 +1,5 @@
 
-# Lab Exercise
+# Lab Exercise for MacOS
 
 In this section we will get hands-on experience and deploy our own Minecraft server. The first step to getting this configured it to download the Docker Desktop software that will be used to build and maintain your Minecraft deployment. 
 ## Install Docker Desktop
