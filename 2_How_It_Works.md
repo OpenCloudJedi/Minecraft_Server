@@ -1,6 +1,6 @@
 # How it works
 
-As stated in the previous section, the docker-compose.yml manifest file provided for this exercise is a full map of our desired Minecraft application. Let's take a look at that file to analyze some of the information contained in that file, and understand what each part does.
+As stated in the previous section, the docker-compose.yml manifest file provided for this exercise is the full set of details of our desired Minecraft application. Let's take a look at that file to analyze some of the information contained in that file, and understand what each part does.
 
 The first 9 lines of the provided example define which vendor, container, and version, as well as persistent volume mount locations. 
 

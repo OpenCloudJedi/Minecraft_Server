@@ -24,6 +24,6 @@ The *docker-compose.yml* manifest file provided for this exercise has all the in
   - Old backup pruning to prevent storage issues
   - Automatic restart of unhealthy container
 
-Once the *docker-compose.yml* file has been instantiated, the containers will be pulled from the online repository and started up. The first time this process runs it takes a little longer since it needs to download the containers and cache them. Additionally, the first time the container is run it installs the Minecraft service and downloads the plugins selected in the manifest.
+Once the *docker-compose.yml* file has been called upon by Docker, the containers will be pulled from the online repository and started up. The first time this process runs it takes a little longer since it needs to download the containers and cache them. Additionally, the first time the container is run it installs the Minecraft service and downloads the plugins selected in the manifest.
 
 [![continue](./images/continue.png)](./2_How_It_Works.md)
